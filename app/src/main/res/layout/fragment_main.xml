@@ -30,6 +30,8 @@
 
                 <!--Text-->
                 <TextView
+                    android:clickable="true"
+                    android:id="@+id/txtlogin"
                     android:textColor="@color/colorWhite"
                     android:layout_gravity="center_vertical"
                     android:textStyle="bold"
