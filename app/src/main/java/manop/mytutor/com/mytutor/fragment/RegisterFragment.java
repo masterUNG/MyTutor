@@ -11,8 +11,19 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import manop.mytutor.com.mytutor.R;
 import manop.mytutor.com.mytutor.utility.MyAlert;
+import manop.mytutor.com.mytutor.utility.MyModel;
 
 public class RegisterFragment extends Fragment{
 
@@ -53,7 +64,7 @@ public class RegisterFragment extends Fragment{
         });
     }
 
-    private void CheckData(String childString) {
+    private void CheckData(final String childString) {
 
 //        Get Value From Edittext to String
         EditText nameEditText = getView().findViewById(R.id.edtName);
@@ -71,7 +82,7 @@ public class RegisterFragment extends Fragment{
         Log.d("2SepV1", "Pass=" + passwordString);
         Log.d("2SepV1", "rePass=" + rePasswaordString);
 
-        MyAlert myAlert = new MyAlert(getActivity());
+        final MyAlert myAlert = new MyAlert(getActivity());
 
         if (nameString.isEmpty()|| idcardString.isEmpty() ||
                 emailString.isEmpty() || passwordString.isEmpty() ||
@@ -88,12 +99,64 @@ public class RegisterFragment extends Fragment{
         } else {
 //            Password True
 
+            final FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+            firebaseAuth.createUserWithEmailAndPassword(emailString, passwordString)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
 
-        }
+                                final FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+                                UserProfileChangeRequest userProfileChangeRequest = new UserProfileChangeRequest
+                                        .Builder().setDisplayName(nameString).build();
+                                firebaseUser.updateProfile(userProfileChangeRequest)
+                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void aVoid) {
+
+                                                Log.d("2SepV1", "DisplayName ==>" + firebaseUser.getDisplayName());
+
+                                                insertValueDatabase(firebaseUser.getUid(), childString);
+                                            }
+                                        });
+
+                            } else {
+                                myAlert.normalDialog("Cannot Register",
+                                        task.getException().getMessage().toString());
+                            }
+                        }
+                    });
+
+
+
+
+        }   //if
 
 
 
     }   // CheckData
+
+    private void insertValueDatabase(String uidString, String childString) {
+
+        MyModel myModel = new MyModel(nameString, idcardString,uidString);
+
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = firebaseDatabase.getReference().child(childString);
+        databaseReference.child(uidString).setValue(myModel)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        getActivity()
+                                .getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.contentMainFragment, new MainFragment())
+                                .commit();
+                    }
+                });
+
+
+
+    }   //insert
 
     @Nullable
     @Override
