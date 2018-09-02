@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "193258929346",
+    "firebase_url": "https://mytutor-9fb60.firebaseio.com",
+    "project_id": "mytutor-9fb60",
+    "storage_bucket": "mytutor-9fb60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193258929346:android:da365ae3484ffd23",
+        "android_client_info": {
+          "package_name": "manop.mytutor.com.mytutor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193258929346-sp0dtjujqdog16o8j1dhi8mfo8fmjrgb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "manop.mytutor.com.mytutor",
+            "certificate_hash": "8216de23fd071d7b6325c800aa6ccc1431bf5f13"
+          }
+        },
+        {
+          "client_id": "193258929346-op1h6eb40ltmb1a5ucc6jv3ol5ucragc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRZFaxuUnPMS1g2yUoLWA3Ut4iaq-t0Qg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193258929346-op1h6eb40ltmb1a5ucc6jv3ol5ucragc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
