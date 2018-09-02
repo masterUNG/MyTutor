@@ -5,99 +5,116 @@
 
 
     <!--Content-->
-    <LinearLayout
+    <ScrollView
+        android:layout_marginBottom="30dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <!--Logo-->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/pre_logo" />
-
-        <!--User-->
-        <EditText
-            android:layout_marginTop="25dp"
-            android:inputType="text"
-            android:textColorHint="@color/colorWhite"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/h3"
-            android:hint="Username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/textfield_user" />
-
-
-        <!--Password-->
-        <EditText
-            android:layout_marginTop="25dp"
-            android:inputType="textPassword"
-            android:textColorHint="@color/colorWhite"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/h3"
-            android:hint="Password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/textfield_password" />
-
-
-        <!--Sign In-->
-        <Button
-            android:layout_marginTop="25dp"
-            android:textColor="@color/colorBlue"
-            android:text="Sign In"
-            android:background="@drawable/button_white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-
-        <!--Social-->
-        <TextView
-            android:textColor="@color/colorWhite"
-            android:layout_margin="25dp"
-            android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/h2"
-            android:text="Login With Social Account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-
-        <!--Logo Social-->
         <LinearLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
 
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
+            <!--Logo-->
             <ImageView
-                android:src="@drawable/facebook"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/pre_logo" />
 
-            <ImageView
-                android:layout_marginRight="60dp"
-                android:layout_marginLeft="60dp"
-                android:src="@drawable/twitter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <!--User-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/textfield_user"
+                android:hint="Username"
+                android:inputType="text"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="@dimen/h3" />
 
-            <ImageView
-                android:src="@drawable/plus"
+
+            <!--Password-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/textfield_password"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="@dimen/h3" />
+
+
+            <!--Sign In-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/button_white"
+                android:text="Sign In"
+                android:textColor="@color/colorBlue" />
+
+
+            <!--Social-->
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="25dp"
+                android:text="Login With Social Account"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/h2" />
+
+
+            <!--Logo Social-->
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/facebook" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:src="@drawable/twitter" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/plus" />
+
+            </LinearLayout>
+
+
+            <!--Register-->
+            <TextView
+                android:id="@+id/txtRegister"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:text="Register"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/h2" />
+
 
         </LinearLayout>
 
-
-        <!--Register-->
-
-
-    </LinearLayout>m
+    </ScrollView>
 
 
     <!--Foot bar-->
