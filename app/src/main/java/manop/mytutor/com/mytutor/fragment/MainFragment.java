@@ -9,16 +9,36 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import manop.mytutor.com.mytutor.R;
 
 public class MainFragment extends Fragment{
+
+    private TextView textView;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
 //        Login Controller
-        TextView textView = getView().findViewById(R.id.txtlogin);
+        loginController();
+
+//        Show DisplayName
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+
+        if (firebaseUser != null) {
+            textView.setText(firebaseUser.getDisplayName());
+
+        }
+
+
+    }   //Main Method
+
+    private void loginController() {
+        textView = getView().findViewById(R.id.txtlogin);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,9 +52,7 @@ public class MainFragment extends Fragment{
                         .commit();
             }
         });
-
-
-    }   //Main Method
+    }
 
     @Nullable
     @Override
