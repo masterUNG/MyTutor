@@ -12,6 +12,14 @@ import manop.mytutor.com.mytutor.R;
 
 public class RegisterFragment extends Fragment{
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+
+
+    }   //Main Method
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

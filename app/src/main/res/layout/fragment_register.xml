@@ -12,6 +12,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
+            <!--Title-->
             <TextView
                 android:textColor="@color/colorWhite"
                 android:layout_gravity="center_horizontal"
@@ -20,6 +22,7 @@
                 android:text="Register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
 
             <!--Name-->
             <LinearLayout
@@ -36,6 +39,9 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:textColorHint="@color/colorGray"
+                    android:hint="Firstname Lastname"
+                    android:id="@+id/edtName"
                     android:layout_marginTop="@dimen/m2"
                     android:textSize="@dimen/h2"
                     android:background="@drawable/textfield_user"
@@ -46,6 +52,33 @@
 
             </LinearLayout>
 
+            <!--ID Card-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/m1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/h3"
+                    android:text="ID Card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:textColorHint="@color/colorGray"
+                    android:hint="13 Digi"
+                    android:id="@+id/edtIDcard"
+                    android:layout_marginTop="@dimen/m2"
+                    android:textSize="@dimen/h2"
+                    android:background="@drawable/textfield_user"
+                    android:textColor="@color/colorWhite"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
 
 
             <!--Email-->
@@ -63,6 +96,7 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:id="@+id/edtEmail"
                     android:textColor="@color/colorWhite"
                     android:layout_marginTop="@dimen/m2"
                     android:textSize="@dimen/h2"
@@ -72,7 +106,6 @@
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
-
 
 
             <!--Password-->
@@ -90,6 +123,7 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:id="@+id/edtPassword"
                     android:textColor="@color/colorWhite"
                     android:layout_marginTop="@dimen/m2"
                     android:textSize="@dimen/h2"
@@ -99,7 +133,6 @@
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
-
 
 
             <!--Re Passwaord-->
@@ -117,6 +150,7 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:id="@+id/edtRePassword"
                     android:textColor="@color/colorWhite"
                     android:layout_marginTop="@dimen/m2"
                     android:textSize="@dimen/h2"
@@ -136,6 +170,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    android:id="@+id/btnStudent"
                     android:layout_marginRight="3dp"
                     android:textColor="@color/colorBlue"
                     android:background="@drawable/button_white"
@@ -145,6 +180,7 @@
                     android:layout_height="wrap_content" />
 
                 <Button
+                    android:id="@+id/btnTeacher"
                     android:layout_marginLeft="3dp"
                     android:textColor="@color/colorBlue"
                     android:background="@drawable/button_white"
