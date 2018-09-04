@@ -40,4 +40,4 @@ public class LoginFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         return view;
     }
-}
+}   //main class

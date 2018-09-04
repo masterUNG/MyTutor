@@ -44,9 +44,19 @@
         </RelativeLayout>
 
         <!--Search-->
+        <SearchView
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_background"
+            android:orientation="vertical"
+            android:visibility="visible" />
 
 
         <!--Banner-->
+
 
 
         <!--Course-->
@@ -56,6 +66,7 @@
 
 
         <!--Foot Bar-->
+        
 
 
     </LinearLayout>
