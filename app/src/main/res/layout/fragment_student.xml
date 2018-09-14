@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true">
+
+        <!--User Profile-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#a6a5a5"
+            android:orientation="vertical">
+
+            <!--User Name-->
+            <TextView
+                android:id="@+id/username_student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:text="User Name"
+                android:textSize="@dimen/h1"
+                android:textStyle="bold" />
+
+            <!--User Photo-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <!--Photo-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_gravity="left"
+                    android:id="@+id/btnStudent"
+                    android:src="@drawable/student_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!--Coin-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Tab Data-->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabStudentData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/colorBlue">
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tapProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabMyCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Course" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabRecent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent" />
+        </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPagerStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v4.view.ViewPager>
+
+
+        <!--Foot bar-->
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

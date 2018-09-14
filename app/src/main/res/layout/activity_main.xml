@@ -6,18 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--Wallpaper-->
-    <ImageView
-        android:src="@drawable/wallpaper_nop"
-        android:scaleType="fitXY"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
-    <!--Content of Fragment-->
-    <FrameLayout
-        android:id="@+id/contentMainFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        <!--Wallpaper-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/wallpaper_nop" />
+
+        <!--Content of Fragment-->
+        <FrameLayout
+            android:id="@+id/contentMainFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/FootBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF"
+            app:menu="@menu/menu"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="603dp" />
+
+    </RelativeLayout>
 
 
 </android.support.constraint.ConstraintLayout>

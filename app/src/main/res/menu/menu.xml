@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/btnHome"
+        android:enabled="true"
+        android:icon="@drawable/home_bar"
+        android:title="@string/home_bar" />
+
+    <item
+        android:id="@+id/btnMyCourse"
+        android:enabled="true"
+        android:icon="@drawable/mycourse_bar"
+        android:title="@string/mycourse_bar" />
+
+    <item
+        android:id="@+id/btnChat"
+        android:enabled="true"
+        android:icon="@drawable/chat_bar"
+        android:title="@string/chat_bar" />
+
+    <item
+        android:id="@+id/btnRecent"
+        android:enabled="true"
+        android:icon="@drawable/recent_bar"
+        android:title="@string/recent_bar" />
+
+    <item
+        android:id="@+id/btnAccount"
+        android:enabled="true"
+        android:icon="@drawable/account_bar"
+        android:title="@string/account_bar" />
+
+
+</menu>
