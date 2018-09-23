@@ -23,7 +23,7 @@
 
             <!--User Name-->
             <TextView
-                android:id="@+id/username_student"
+                android:id="@+id/txtNameTeacher"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -41,15 +41,11 @@
                 <!--Photo-->
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_gravity="left"
-                    android:id="@+id/btnStudent"
+                    android:id="@+id/imvTeacher"
                     android:src="@drawable/student_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="@dimen/avata"
+                    android:layout_height="@dimen/avata" />
 
-                <!--Coin-->
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
 
 
             </LinearLayout>
@@ -59,35 +55,15 @@
 
         <!--Tab Data-->
         <android.support.design.widget.TabLayout
-            android:id="@+id/tabStudentData"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:id="@+id/tabLayoutTeacher"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabIndicatorColor="@color/colorBlue">
-
-            <android.support.design.widget.TabItem
-                android:id="@+id/tapProfile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Profile" />
-
-            <android.support.design.widget.TabItem
-                android:id="@+id/tabMyCourse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="My Course" />
-
-            <android.support.design.widget.TabItem
-                android:id="@+id/tabRecent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Recent" />
-        </android.support.design.widget.TabLayout>
+            android:layout_height="wrap_content"/>
 
         <android.support.v4.view.ViewPager
-            android:id="@+id/viewPagerStudent"
+            android:id="@+id/viewPagerTeacher"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </android.support.v4.view.ViewPager>
+            android:layout_height="match_parent"/>
 
 
         <!--Foot bar-->
@@ -95,6 +71,7 @@
 
     </LinearLayout>
 
+    <!--Sign Out-->
     <ImageView
         android:id="@+id/imvSignOut"
         android:layout_margin="@dimen/m1"
